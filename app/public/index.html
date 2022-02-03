@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Test Program</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid" id="app">
+        <div class="row justify-content-center">
+            <h2 class="text-center bg-light pb-3 pt-3 m-0"> {{title}} <span v-if="activeUser >= 1" class="badge bg-success pt-1">{{activeUser}}</span></h2>
+            <div class="col-12 col-lg-7 col-md-8">
+                <div v-for="msg in joinUsers">
+                    {{msg}}
+                </div>
+            </div>
+
+            <div v-if="authUser" class="row pt-3 justify-content-center">
+
+                <div id="messages" class="col-12 col-lg-7 col-md-8" style="overflow: scroll;height: 80vh;">
+                    <li v-for="msg in messages" class="mb-2 list-unstyled position-relative">
+                        <img src="profile.png" class="position-absolute mb-0" style="border-radius: 50px;width:45px;height:45px;top:0;left:0;" alt="">
+                        <div class="pl-3  position-relative text-left" style="width:80%;min-height:10px;left:50px;top:0;border-radius:10px;text-align:left;">
+                            <p class="d-inline-block m-0" style="font-size: 15px;font-weight:500;padding-top:5px!important;padding-left:10px!important;">{{msg.username}} </p>
+                            <p>{{msg.message}}</p>
+                        </div>
+                    </li>
+                    <div v-show="checkTyping" class="position-absolute w-100" style="left: 10px;">
+                        {{typingMsg}}
+                    </div>
+                    <div class="mb-5 pb-3"></div>
+                </div>
+
+                <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, officia culpa! Illum magnam incidunt reiciendis, dolorem reprehenderit autem voluptatem est omnis officiis delectus dolore veniam qui nisi alias! Ullam, corrupti. -->
+
+                <!-- @keyup.enter="send" -->
+                <div v-if="authUser" class="pt-3 position-absolute w-100 row justify-content-center" style="bottom: 0;min-height: 80px;background-color: rgb(39, 142, 211);">
+                    <textarea @keyup.delete="backspace" @keyup.enter="textareaHight" placeholder="Write something . . ." type="text" v-model="msgInput" :style="{height : high + 'px'}" class="bg-light col-9 col-md-7 col-lg-4  p-2 shadow border-0" style="outline: none;border-radius: 4px;"></textarea>
+                    <div class="col-1 p-0" style="width: 5px!important;"></div>
+                    <div @click="send" :style="margintop" class="col-2 position-relative col-md-2 col-lg-1 btn btn-light shadow m-0 mb-1 ml-2" style="height: 45px;bottom: 0;">
+                        <span class="fa fa-paper-plane"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div v-else class="col-12 col-lg-7 col-md-8 mt-5 p-2 text-center">
+                <div @click="connect" class="btn btn-success fw-bold w-50">Connect</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="socket.io-client/socket.io.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                title: "Global Chat",
+                authUser: false,
+                joinUsers: [],
+                activeUser: 0,
+                messages: [],
+                msgInput: '',
+                username: 'Zin Min Htet',
+                high: 45,
+                sentBtnMargin: 0,
+                margintop: '',
+
+                checkTyping: false,
+                typingMsg: ''
+
+            },
+            updated() {
+                // whenever data changes and the component re-renders, this is called.
+                this.$nextTick(() => this.scrollToEnd());
+            },
+            methods: {
+                scrollToEnd: function() {
+                    // scroll to the start of the last message
+                    var messages = this.$el.querySelector('#messages');
+                    messages.scrollTop = messages.lastElementChild.offsetTop;
+                },
+                backspace() {
+                    if (this.high > 55) {
+                        this.high = this.high - 10;
+                        this.sentBtnMargin = this.sentBtnMargin - 10;
+                        this.margintop = `margin-top:${this.sentBtnMargin}px!important;`;
+                        console.log("Back Work");
+                    }
+                },
+                textareaHight() {
+                    this.high += 10;
+                    this.sentBtnMargin += 10;
+                    this.margintop = `margin-top:${this.sentBtnMargin}px!important;`;
+                },
+                connect() {
+                    this.authUser = true;
+                    this.activeUser++;
+                    this.socket.emit('connect user', this.makeid(5), this.username + this.makeid(9), this.makeid(5) + '.png');
+                },
+                send(e) {
+                    e.preventDefault();
+                    let callback = this.socket.emit('new message', this.msgInput);
+                    if (callback.connected) {
+                        this.high = 45;
+                        this.margintop = 'margin-top:0px!important;';
+                        this.messages.push({
+                            'username': 'You',
+                            'message': this.msgInput
+                        });
+                        this.msgInput = '';
+                    }
+                },
+                callApi() {
+                    setTimeout(() => {
+                        console.log("calling");
+                        this.socket.emit('api');
+                        this.callApi();
+                    }, 8000);
+                },
+                makeid(length) {
+                    var result = '';
+                    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                    var charactersLength = characters.length;
+                    for (var i = 0; i < length; i++) {
+                        result += characters.charAt(Math.floor(Math.random() *
+                            charactersLength));
+                    }
+                    return result;
+                }
+            },
+            created() {
+                this.socket = io('http://' + document.domain + ':2020');
+                // Create KeyPress Event to emit to server
+                window.addEventListener('keydown', (e) => {
+                    if (e.key != 'Backspace' && e.key != 'Escape') {
+                        this.socket.emit('typing');
+                    }
+                });
+            },
+            mounted() {
+
+                console.log(this.$el);
+
+                this.socket.on('live api', (e) => {
+                    console.log('Getting Api ', e);
+                });
+
+                this.socket.on('typing', (e) => {
+                    this.checkTyping = true;
+                    this.typingMsg = `${e.username} is typing . . .`;
+                    setTimeout(() => {
+                        this.checkTyping = false;
+                    }, 1500);
+                });
+
+                this.socket.on('new message', (e) => {
+                    console.log('Call Back ', e);
+                    if (e !== undefined) {
+                        this.messages.push({
+                            'username': e.username,
+                            'message': e.message
+                        });
+                    }
+                })
+
+                // You are entering site
+                this.socket.on('connect', () => {
+                    console.log('You are reaching out', document.domain);
+                });
+
+                // If someone joined,that will show all users
+                this.socket.on('user joined', (e) => {
+                    this.activeUser = e.num;
+                    this.joinUsers.push(`${e.username} joined the connection.`);
+                    setTimeout(() => {
+                        if (this.activeUser >= 1) {
+                            // this.joinUsers.shift();
+                            this.joinUsers = [];
+                        }
+                    }, 2000);
+                });
+
+                // Whenever the server emits 'user left', log it in the chat body
+                this.socket.on('user left', (e) => {
+                    this.activeUser = e.num;
+                    console.log(e.username + ' left the connection');
+                });
+
+                // Whenever the server emits 'user disconnect'
+                this.socket.on('disconnect', () => {
+                    this.authUser = false;
+                    console.log('You have been disconnected');
+                });
+
+                this.socket.on('reconnect', () => {
+                    this.authUser = true;
+                    console.log('You have been reconnected');
+                    if (this.username) {
+                        // this.socket.emit('add user', this.username);
+                        this.socket.on('user joined', function(e) {
+                            console.log(e.username, ' joined the connection');
+                        });
+                    }
+                });
+
+                this.socket.on('reconnect_error', (e) => {
+                    console.log('Attempt to reconnect has failed', e);
+                });
+            }
+        })
+    </script>
+</body>
+
+</html>

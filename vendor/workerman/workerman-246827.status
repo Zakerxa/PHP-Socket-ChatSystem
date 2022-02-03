@@ -1,0 +1,7 @@
+--------------------------------------------------------------------- WORKERMAN CONNECTION STATUS --------------------------------------------------------------------------------
+PID      Worker          CID       Trans   Protocol        ipv4   ipv6   Recv-Q       Send-Q       Bytes-R      Bytes-W       Status         Local Address          Foreign Address
+246828   web             1         tcp     Http             1      0     0B           0B           809B         4.9KB         ESTABLISHED    127.0.0.1:2022         127.0.0.1:54724       
+246828   web             2         tcp     Http             1      0     0B           0B           1.2KB        299.1KB       ESTABLISHED    127.0.0.1:2022         127.0.0.1:54726       
+246937   PHPSocketIO     1         tcp     SocketIO         1      0     0B           0B           1.1KB        860B          ESTABLISHED    127.0.0.1:2020         127.0.0.1:46764       
+246937   PHPSocketIO     2         tcp     SocketIO         1      0     0B           0B           712B         323B          ESTABLISHED    127.0.0.1:2020         127.0.0.1:46784       
+246937   PHPSocketIO     3         tcp     RFC6455          1      0     0B           0B           560B         183B          ESTABLISHED    127.0.0.1:2020         127.0.0.1:46786       

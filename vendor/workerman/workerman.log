@@ -1,0 +1,495 @@
+2022-01-14 12:20:48 pid:229020 Workerman[start.php] connections 
+2022-01-14 12:20:48 pid:229020 Workerman[start.php] not run
+2022-01-14 12:21:29 pid:229118 Workerman[start.php] status 
+2022-01-14 12:21:29 pid:229118 Workerman[start.php] not run
+2022-01-14 12:21:48 pid:229175 Workerman[start_web.php] connections 
+2022-01-14 12:21:48 pid:229175 Workerman[start_web.php] not run
+2022-01-14 12:21:53 pid:229189 Workerman[start_web.php] start in DEBUG mode
+2022-01-14 12:23:15 pid:229390 Workerman[start_web.php] start in DEBUG mode
+2022-01-14 12:23:15 pid:229390 Workerman[start_web.php] already running
+2022-01-14 12:23:19 pid:229189 Workerman[start_web.php] stopping ...
+2022-01-14 12:23:19 pid:229189 Workerman[start_web.php] has been stopped
+2022-01-14 12:26:14 pid:229738 Workerman[start.php] start in DEBUG mode
+2022-01-14 21:08:59 pid:236888 Workerman[start.php] start in DAEMON mode
+2022-01-14 21:23:48 pid:237998 Workerman[start.php] start in DAEMON mode
+2022-01-14 21:23:48 pid:237998 Workerman[start.php] already running
+2022-01-14 21:57:15 pid:240534 Workerman[start.php] restart 
+2022-01-14 21:57:15 pid:240534 Workerman[start.php] is stopping ...
+2022-01-14 21:57:15 pid:236890 Workerman[start.php] stopping ...
+2022-01-14 21:57:16 pid:236890 Workerman[start.php] has been stopped
+2022-01-14 21:57:16 pid:240534 Workerman[start.php] stop success
+2022-01-14 22:28:41 pid:240534 Workerman[start.php] stopping ...
+2022-01-14 22:28:41 pid:240534 Workerman[start.php] has been stopped
+2022-01-14 15:59:01 pid:243209 Workerman[start.php] start in DEBUG mode
+2022-01-14 16:06:23 pid:243209 Workerman[start.php] stopping ...
+2022-01-14 16:06:25 pid:243211 worker[243211] remains 8 connection(s)
+2022-01-14 16:07:30 pid:243210 worker[243210] remains 1 connection(s)
+2022-01-14 16:20:40 pid:243210 worker[243210] remains 0 connection(s)
+2022-01-14 16:41:49 pid:246636 Workerman[start.php] start in DEBUG mode
+2022-01-14 16:41:49 pid:246636 Workerman[start.php] already running
+2022-01-14 16:42:44 pid:246712 Workerman[start.php] connections 
+2022-01-14 16:43:22 pid:246755 Workerman[start.php] stop 
+2022-01-14 16:43:22 pid:246755 Workerman[start.php] is stopping ...
+2022-01-14 16:43:22 pid:243209 Workerman[start.php] stopping ...
+2022-01-14 16:43:22 pid:243209 Workerman[start.php] has been stopped
+2022-01-14 16:43:22 pid:246755 Workerman[start.php] stop success
+2022-01-14 16:44:04 pid:246825 Workerman[start.php] start in DAEMON mode
+2022-01-14 16:44:35 pid:246829 ArgumentCountError: Too few arguments to function {closure}(), 0 passed and exactly 1 expected in /home/zakerxa/Desktop/my-socket-php/examples/chat/start_io.php:24
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#2 [internal function]: PHPSocketIO\Event\Emitter->emit()
+#3 /home/zakerxa/Desktop/my-socket-php/src/Socket.php(307): call_user_func_array()
+#4 /home/zakerxa/Desktop/my-socket-php/src/Socket.php(269): PHPSocketIO\Socket->onevent()
+#5 /home/zakerxa/Desktop/my-socket-php/src/Client.php(202): PHPSocketIO\Socket->onpacket()
+#6 [internal function]: PHPSocketIO\Client->ondecoded()
+#7 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#8 /home/zakerxa/Desktop/my-socket-php/src/Parser/Decoder.php(34): PHPSocketIO\Event\Emitter->emit()
+#9 /home/zakerxa/Desktop/my-socket-php/src/Client.php(182): PHPSocketIO\Parser\Decoder->add()
+#10 [internal function]: PHPSocketIO\Client->ondata()
+#11 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#12 /home/zakerxa/Desktop/my-socket-php/src/Engine/Socket.php(187): PHPSocketIO\Event\Emitter->emit()
+#13 [internal function]: PHPSocketIO\Engine\Socket->onPacket()
+#14 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#15 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transport.php(56): PHPSocketIO\Event\Emitter->emit()
+#16 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transport.php(61): PHPSocketIO\Engine\Transport->onPacket()
+#17 [internal function]: PHPSocketIO\Engine\Transport->onData()
+#18 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transports/WebSocket.php(26): call_user_func()
+#19 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Connection/TcpConnection.php(638): PHPSocketIO\Engine\Transports\WebSocket->onData2()
+#20 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Events/Select.php(294): Workerman\Connection\TcpConnection->baseRead()
+#21 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(2418): Workerman\Events\Select->loop()
+#22 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1542): Workerman\Worker->run()
+#23 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1373): Workerman\Worker::forkOneWorkerForLinux()
+#24 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1347): Workerman\Worker::forkWorkersForLinux()
+#25 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(542): Workerman\Worker::forkWorkers()
+#26 /home/zakerxa/Desktop/my-socket-php/examples/chat/start.php(12): Workerman\Worker::runAll()
+#27 {main}
+2022-01-14 16:44:35 pid:246827 worker[PHPSocketIO:246829] exit with status 64000
+2022-01-14 16:44:44 pid:246878 ArgumentCountError: Too few arguments to function {closure}(), 0 passed and exactly 1 expected in /home/zakerxa/Desktop/my-socket-php/examples/chat/start_io.php:24
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#2 [internal function]: PHPSocketIO\Event\Emitter->emit()
+#3 /home/zakerxa/Desktop/my-socket-php/src/Socket.php(307): call_user_func_array()
+#4 /home/zakerxa/Desktop/my-socket-php/src/Socket.php(269): PHPSocketIO\Socket->onevent()
+#5 /home/zakerxa/Desktop/my-socket-php/src/Client.php(202): PHPSocketIO\Socket->onpacket()
+#6 [internal function]: PHPSocketIO\Client->ondecoded()
+#7 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#8 /home/zakerxa/Desktop/my-socket-php/src/Parser/Decoder.php(34): PHPSocketIO\Event\Emitter->emit()
+#9 /home/zakerxa/Desktop/my-socket-php/src/Client.php(182): PHPSocketIO\Parser\Decoder->add()
+#10 [internal function]: PHPSocketIO\Client->ondata()
+#11 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#12 /home/zakerxa/Desktop/my-socket-php/src/Engine/Socket.php(187): PHPSocketIO\Event\Emitter->emit()
+#13 [internal function]: PHPSocketIO\Engine\Socket->onPacket()
+#14 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#15 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transport.php(56): PHPSocketIO\Event\Emitter->emit()
+#16 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transport.php(61): PHPSocketIO\Engine\Transport->onPacket()
+#17 [internal function]: PHPSocketIO\Engine\Transport->onData()
+#18 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transports/WebSocket.php(26): call_user_func()
+#19 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Connection/TcpConnection.php(638): PHPSocketIO\Engine\Transports\WebSocket->onData2()
+#20 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Events/Select.php(294): Workerman\Connection\TcpConnection->baseRead()
+#21 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(2418): Workerman\Events\Select->loop()
+#22 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1542): Workerman\Worker->run()
+#23 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1373): Workerman\Worker::forkOneWorkerForLinux()
+#24 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1347): Workerman\Worker::forkWorkersForLinux()
+#25 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1679): Workerman\Worker::forkWorkers()
+#26 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1628): Workerman\Worker::monitorWorkersForLinux()
+#27 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(544): Workerman\Worker::monitorWorkers()
+#28 /home/zakerxa/Desktop/my-socket-php/examples/chat/start.php(12): Workerman\Worker::runAll()
+#29 {main}
+2022-01-14 16:44:44 pid:246827 worker[PHPSocketIO:246878] exit with status 64000
+2022-01-14 16:44:54 pid:246902 ArgumentCountError: Too few arguments to function {closure}(), 0 passed and exactly 1 expected in /home/zakerxa/Desktop/my-socket-php/examples/chat/start_io.php:24
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#2 [internal function]: PHPSocketIO\Event\Emitter->emit()
+#3 /home/zakerxa/Desktop/my-socket-php/src/Socket.php(307): call_user_func_array()
+#4 /home/zakerxa/Desktop/my-socket-php/src/Socket.php(269): PHPSocketIO\Socket->onevent()
+#5 /home/zakerxa/Desktop/my-socket-php/src/Client.php(202): PHPSocketIO\Socket->onpacket()
+#6 [internal function]: PHPSocketIO\Client->ondecoded()
+#7 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#8 /home/zakerxa/Desktop/my-socket-php/src/Parser/Decoder.php(34): PHPSocketIO\Event\Emitter->emit()
+#9 /home/zakerxa/Desktop/my-socket-php/src/Client.php(182): PHPSocketIO\Parser\Decoder->add()
+#10 [internal function]: PHPSocketIO\Client->ondata()
+#11 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#12 /home/zakerxa/Desktop/my-socket-php/src/Engine/Socket.php(187): PHPSocketIO\Event\Emitter->emit()
+#13 [internal function]: PHPSocketIO\Engine\Socket->onPacket()
+#14 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#15 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transport.php(56): PHPSocketIO\Event\Emitter->emit()
+#16 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transport.php(61): PHPSocketIO\Engine\Transport->onPacket()
+#17 [internal function]: PHPSocketIO\Engine\Transport->onData()
+#18 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transports/WebSocket.php(26): call_user_func()
+#19 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Connection/TcpConnection.php(638): PHPSocketIO\Engine\Transports\WebSocket->onData2()
+#20 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Events/Select.php(294): Workerman\Connection\TcpConnection->baseRead()
+#21 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(2418): Workerman\Events\Select->loop()
+#22 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1542): Workerman\Worker->run()
+#23 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1373): Workerman\Worker::forkOneWorkerForLinux()
+#24 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1347): Workerman\Worker::forkWorkersForLinux()
+#25 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1679): Workerman\Worker::forkWorkers()
+#26 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1628): Workerman\Worker::monitorWorkersForLinux()
+#27 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(544): Workerman\Worker::monitorWorkers()
+#28 /home/zakerxa/Desktop/my-socket-php/examples/chat/start.php(12): Workerman\Worker::runAll()
+#29 {main}
+2022-01-14 16:44:54 pid:246827 worker[PHPSocketIO:246902] exit with status 64000
+2022-01-14 16:45:04 pid:246953 Workerman[start.php] connections 
+2022-01-14 16:45:09 pid:246937 ArgumentCountError: Too few arguments to function {closure}(), 0 passed and exactly 1 expected in /home/zakerxa/Desktop/my-socket-php/examples/chat/start_io.php:24
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#2 [internal function]: PHPSocketIO\Event\Emitter->emit()
+#3 /home/zakerxa/Desktop/my-socket-php/src/Socket.php(307): call_user_func_array()
+#4 /home/zakerxa/Desktop/my-socket-php/src/Socket.php(269): PHPSocketIO\Socket->onevent()
+#5 /home/zakerxa/Desktop/my-socket-php/src/Client.php(202): PHPSocketIO\Socket->onpacket()
+#6 [internal function]: PHPSocketIO\Client->ondecoded()
+#7 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#8 /home/zakerxa/Desktop/my-socket-php/src/Parser/Decoder.php(34): PHPSocketIO\Event\Emitter->emit()
+#9 /home/zakerxa/Desktop/my-socket-php/src/Client.php(182): PHPSocketIO\Parser\Decoder->add()
+#10 [internal function]: PHPSocketIO\Client->ondata()
+#11 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#12 /home/zakerxa/Desktop/my-socket-php/src/Engine/Socket.php(187): PHPSocketIO\Event\Emitter->emit()
+#13 [internal function]: PHPSocketIO\Engine\Socket->onPacket()
+#14 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#15 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transport.php(56): PHPSocketIO\Event\Emitter->emit()
+#16 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transport.php(61): PHPSocketIO\Engine\Transport->onPacket()
+#17 [internal function]: PHPSocketIO\Engine\Transport->onData()
+#18 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transports/WebSocket.php(26): call_user_func()
+#19 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Connection/TcpConnection.php(638): PHPSocketIO\Engine\Transports\WebSocket->onData2()
+#20 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Events/Select.php(294): Workerman\Connection\TcpConnection->baseRead()
+#21 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(2418): Workerman\Events\Select->loop()
+#22 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1542): Workerman\Worker->run()
+#23 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1373): Workerman\Worker::forkOneWorkerForLinux()
+#24 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1347): Workerman\Worker::forkWorkersForLinux()
+#25 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1679): Workerman\Worker::forkWorkers()
+#26 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1628): Workerman\Worker::monitorWorkersForLinux()
+#27 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(544): Workerman\Worker::monitorWorkers()
+#28 /home/zakerxa/Desktop/my-socket-php/examples/chat/start.php(12): Workerman\Worker::runAll()
+#29 {main}
+2022-01-14 16:45:09 pid:246827 worker[PHPSocketIO:246937] exit with status 64000
+2022-01-15 16:52:42 pid:6652 Workerman[start.php] start in DAEMON mode
+2022-01-15 16:55:38 pid:7517 Workerman[start.php] stop 
+2022-01-15 16:55:38 pid:7517 Workerman[start.php] is stopping ...
+2022-01-15 16:55:38 pid:6655 Workerman[start.php] stopping ...
+2022-01-15 16:55:38 pid:6655 Workerman[start.php] has been stopped
+2022-01-15 16:55:38 pid:7517 Workerman[start.php] stop success
+2022-01-15 16:58:31 pid:8450 Workerman[start.php] start in DAEMON mode
+2022-01-15 10:54:43 pid:11053 Workerman[start.php] stop 
+2022-01-15 10:54:43 pid:11053 Workerman[start.php] is stopping ...
+2022-01-15 17:24:44 pid:8452 Workerman[start.php] stopping ...
+2022-01-15 17:24:45 pid:8452 Workerman[start.php] has been stopped
+2022-01-15 10:54:45 pid:11053 Workerman[start.php] stop success
+2022-01-15 18:01:40 pid:15103 Workerman[start.php] start in DAEMON mode
+2022-01-15 18:04:51 pid:15526 Workerman[start.php] stop 
+2022-01-15 18:04:51 pid:15526 Workerman[start.php] is stopping ...
+2022-01-15 18:04:51 pid:15105 Workerman[start.php] stopping ...
+2022-01-15 18:04:51 pid:15105 Workerman[start.php] has been stopped
+2022-01-15 18:04:51 pid:15526 Workerman[start.php] stop success
+2022-01-15 18:04:55 pid:15533 Workerman[start.php] start in DAEMON mode
+2022-01-15 18:05:46 pid:15594 Workerman[start.php] stop 
+2022-01-15 18:05:46 pid:15594 Workerman[start.php] is stopping ...
+2022-01-15 18:05:46 pid:15535 Workerman[start.php] stopping ...
+2022-01-15 18:05:48 pid:15535 worker[PHPSocketIO:15537] exit with status 9
+2022-01-15 18:05:48 pid:15535 Workerman[start.php] has been stopped
+2022-01-15 18:05:48 pid:15594 Workerman[start.php] stop success
+2022-01-15 18:10:34 pid:15910 Workerman[start.php] stop 
+2022-01-15 18:10:34 pid:15910 Workerman[start.php] not run
+2022-01-15 18:11:18 pid:15957 Workerman[start.php] stop 
+2022-01-15 18:11:18 pid:15957 Workerman[start.php] not run
+2022-01-15 18:12:07 pid:16050 Workerman[start.php] stop 
+2022-01-15 18:12:07 pid:16050 Workerman[start.php] not run
+2022-01-15 18:12:09 pid:16054 Workerman[start.php] stop 
+2022-01-15 18:12:09 pid:16054 Workerman[start.php] not run
+2022-01-15 18:12:20 pid:16098 Workerman[start.php] start in DAEMON mode
+2022-01-15 18:12:56 pid:16102 Worker[16102] process terminated with ERROR: E_ERROR "Cannot redeclare liveApi() (previously declared in /home/zakerxa/Desktop/my-socket-php/examples/chat/start_io.php:25) in /home/zakerxa/Desktop/my-socket-php/examples/chat/start_io.php on line 24"
+2022-01-15 18:12:56 pid:16100 worker[PHPSocketIO:16102] exit with status 65280
+2022-01-15 18:14:38 pid:16319 Workerman[start.php] stop 
+2022-01-15 18:14:38 pid:16319 Workerman[start.php] is stopping ...
+2022-01-15 18:14:38 pid:16100 Workerman[start.php] stopping ...
+2022-01-15 18:14:38 pid:16100 Workerman[start.php] has been stopped
+2022-01-15 18:14:38 pid:16319 Workerman[start.php] stop success
+2022-01-15 18:14:40 pid:16326 Workerman[start.php] start in DAEMON mode
+2022-01-15 18:16:24 pid:16559 Workerman[start.php] stop 
+2022-01-15 18:16:24 pid:16559 Workerman[start.php] is stopping ...
+2022-01-15 18:16:24 pid:16328 Workerman[start.php] stopping ...
+2022-01-15 18:16:24 pid:16328 Workerman[start.php] has been stopped
+2022-01-15 18:16:24 pid:16559 Workerman[start.php] stop success
+2022-01-15 18:16:26 pid:16567 Workerman[start.php] start in DAEMON mode
+2022-01-15 18:19:40 pid:16955 Workerman[start.php] stop 
+2022-01-15 18:19:40 pid:16955 Workerman[start.php] is stopping ...
+2022-01-15 18:19:40 pid:16569 Workerman[start.php] stopping ...
+2022-01-15 18:19:40 pid:16569 Workerman[start.php] has been stopped
+2022-01-15 18:19:40 pid:16955 Workerman[start.php] stop success
+2022-01-15 18:19:42 pid:16962 Workerman[start.php] start in DAEMON mode
+2022-01-15 18:21:25 pid:17141 Workerman[start.php] stop 
+2022-01-15 18:21:25 pid:17141 Workerman[start.php] is stopping ...
+2022-01-15 18:21:25 pid:16964 Workerman[start.php] stopping ...
+2022-01-15 18:21:25 pid:16964 Workerman[start.php] has been stopped
+2022-01-15 18:21:25 pid:17141 Workerman[start.php] stop success
+2022-01-15 18:21:26 pid:17147 Workerman[start.php] start in DAEMON mode
+2022-01-15 18:22:16 pid:17277 Workerman[start.php] stop 
+2022-01-15 18:22:16 pid:17277 Workerman[start.php] is stopping ...
+2022-01-15 18:22:16 pid:17149 Workerman[start.php] stopping ...
+2022-01-15 18:22:16 pid:17149 Workerman[start.php] has been stopped
+2022-01-15 18:22:16 pid:17277 Workerman[start.php] stop success
+2022-01-15 18:22:17 pid:17287 Workerman[start.php] start in DAEMON mode
+2022-01-15 18:24:52 pid:17444 Workerman[start.php] stop 
+2022-01-15 18:24:52 pid:17444 Workerman[start.php] is stopping ...
+2022-01-15 18:24:52 pid:17289 Workerman[start.php] stopping ...
+2022-01-15 18:24:52 pid:17289 Workerman[start.php] has been stopped
+2022-01-15 18:24:52 pid:17444 Workerman[start.php] stop success
+2022-01-15 18:24:53 pid:17449 Workerman[start.php] start in DAEMON mode
+2022-01-15 18:26:19 pid:17554 Workerman[start.php] stop 
+2022-01-15 18:26:19 pid:17554 Workerman[start.php] is stopping ...
+2022-01-15 18:26:19 pid:17451 Workerman[start.php] stopping ...
+2022-01-15 18:26:19 pid:17451 Workerman[start.php] has been stopped
+2022-01-15 18:26:19 pid:17554 Workerman[start.php] stop success
+2022-01-15 18:26:21 pid:17574 Workerman[start.php] start in DAEMON mode
+2022-01-15 18:26:45 pid:17623 Workerman[start.php] stop 
+2022-01-15 18:26:45 pid:17623 Workerman[start.php] is stopping ...
+2022-01-15 18:26:45 pid:17576 Workerman[start.php] stopping ...
+2022-01-15 18:26:45 pid:17576 Workerman[start.php] has been stopped
+2022-01-15 18:26:45 pid:17623 Workerman[start.php] stop success
+2022-01-15 18:26:47 pid:17628 Workerman[start.php] start in DAEMON mode
+2022-01-15 11:59:14 pid:17874 Workerman[start.php] stop 
+2022-01-15 11:59:14 pid:17874 Workerman[start.php] is stopping ...
+2022-01-15 18:29:14 pid:17630 Workerman[start.php] stopping ...
+2022-01-15 18:29:14 pid:17630 Workerman[start.php] has been stopped
+2022-01-15 11:59:14 pid:17874 Workerman[start.php] stop success
+2022-01-15 11:59:16 pid:17905 Workerman[start.php] start in DAEMON mode
+2022-01-15 12:00:10 pid:18087 Workerman[start.php] stop 
+2022-01-15 12:00:10 pid:18087 Workerman[start.php] is stopping ...
+2022-01-15 12:00:10 pid:17907 Workerman[start.php] stopping ...
+2022-01-15 12:00:10 pid:17907 Workerman[start.php] has been stopped
+2022-01-15 12:00:10 pid:18087 Workerman[start.php] stop success
+2022-01-15 12:00:11 pid:18111 Workerman[start.php] start in DAEMON mode
+2022-01-15 12:02:17 pid:18287 Workerman[start.php] stop 
+2022-01-15 12:02:17 pid:18287 Workerman[start.php] is stopping ...
+2022-01-15 12:02:17 pid:18113 Workerman[start.php] stopping ...
+2022-01-15 12:02:17 pid:18113 Workerman[start.php] has been stopped
+2022-01-15 12:02:17 pid:18287 Workerman[start.php] stop success
+2022-01-15 12:02:20 pid:18292 Workerman[start.php] start in DAEMON mode
+2022-01-15 12:04:59 pid:18388 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 12:04:59 pid:18388 Workerman[examples/chat/start.php] already running
+2022-01-15 12:05:14 pid:18421 Workerman[examples/chat/start.php] stop 
+2022-01-15 12:05:14 pid:18421 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 12:05:14 pid:18294 Workerman[start.php] stopping ...
+2022-01-15 12:05:14 pid:18294 Workerman[start.php] has been stopped
+2022-01-15 12:05:14 pid:18421 Workerman[examples/chat/start.php] stop success
+2022-01-15 12:05:19 pid:18447 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 12:06:01 pid:18504 Workerman[examples/chat/start.php] stop 
+2022-01-15 12:06:01 pid:18504 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 12:06:01 pid:18449 Workerman[start.php] stopping ...
+2022-01-15 12:06:01 pid:18449 Workerman[start.php] has been stopped
+2022-01-15 12:06:01 pid:18504 Workerman[examples/chat/start.php] stop success
+2022-01-15 12:06:04 pid:18511 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 18:37:01 pid:18605 Workerman[examples/chat/start.php] stop 
+2022-01-15 18:37:01 pid:18605 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 12:07:01 pid:18513 Workerman[start.php] stopping ...
+2022-01-15 12:07:01 pid:18513 Workerman[start.php] has been stopped
+2022-01-15 18:37:01 pid:18605 Workerman[examples/chat/start.php] stop success
+2022-01-15 18:37:03 pid:18610 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 12:12:23 pid:19441 Workerman[examples/chat/start.php] stop 
+2022-01-15 12:12:23 pid:19441 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 18:42:23 pid:18612 Workerman[start.php] stopping ...
+2022-01-15 18:42:23 pid:18612 Workerman[start.php] has been stopped
+2022-01-15 12:12:23 pid:19441 Workerman[examples/chat/start.php] stop success
+2022-01-15 12:12:25 pid:19448 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 18:44:46 pid:19563 Workerman[examples/chat/start.php] stop 
+2022-01-15 18:44:46 pid:19563 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 12:14:46 pid:19450 Workerman[start.php] stopping ...
+2022-01-15 12:14:46 pid:19450 Workerman[start.php] has been stopped
+2022-01-15 18:44:46 pid:19563 Workerman[examples/chat/start.php] stop success
+2022-01-15 18:44:48 pid:19570 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 18:46:28 pid:19743 Workerman[examples/chat/start.php] stop 
+2022-01-15 18:46:28 pid:19743 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 18:46:28 pid:19572 Workerman[start.php] stopping ...
+2022-01-15 18:46:28 pid:19572 Workerman[start.php] has been stopped
+2022-01-15 18:46:28 pid:19743 Workerman[examples/chat/start.php] stop success
+2022-01-15 18:46:33 pid:19766 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 18:48:11 pid:19941 Workerman[examples/chat/start.php] stop 
+2022-01-15 18:48:11 pid:19941 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 18:48:11 pid:19768 Workerman[start.php] stopping ...
+2022-01-15 18:48:11 pid:19768 Workerman[start.php] has been stopped
+2022-01-15 18:48:11 pid:19941 Workerman[examples/chat/start.php] stop success
+2022-01-15 18:48:14 pid:19951 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 18:49:06 pid:20033 Workerman[examples/chat/start.php] stop 
+2022-01-15 18:49:06 pid:20033 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 18:49:06 pid:19953 Workerman[start.php] stopping ...
+2022-01-15 18:49:06 pid:19953 Workerman[start.php] has been stopped
+2022-01-15 18:49:06 pid:20033 Workerman[examples/chat/start.php] stop success
+2022-01-15 18:49:09 pid:20038 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 18:53:36 pid:20655 Workerman[examples/chat/start.php] stop 
+2022-01-15 18:53:36 pid:20655 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 18:53:36 pid:20040 Workerman[start.php] stopping ...
+2022-01-15 18:53:36 pid:20040 Workerman[start.php] has been stopped
+2022-01-15 18:53:36 pid:20655 Workerman[examples/chat/start.php] stop success
+2022-01-15 18:53:40 pid:20681 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 19:08:17 pid:22095 Workerman[examples/chat/start.php] stop 
+2022-01-15 19:08:17 pid:22095 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 19:08:17 pid:20683 Workerman[start.php] stopping ...
+2022-01-15 19:08:17 pid:20683 Workerman[start.php] has been stopped
+2022-01-15 19:08:17 pid:22095 Workerman[examples/chat/start.php] stop success
+2022-01-15 19:08:19 pid:22117 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 19:14:56 pid:22543 Workerman[examples/chat/start.php] stop 
+2022-01-15 19:14:56 pid:22543 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 19:14:56 pid:22119 Workerman[start.php] stopping ...
+2022-01-15 19:14:56 pid:22119 Workerman[start.php] has been stopped
+2022-01-15 19:14:56 pid:22543 Workerman[examples/chat/start.php] stop success
+2022-01-15 19:22:56 pid:23536 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 19:26:14 pid:23853 Workerman[examples/chat/start.php] stop 
+2022-01-15 19:26:14 pid:23853 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 19:26:14 pid:23538 Workerman[start.php] stopping ...
+2022-01-15 19:26:14 pid:23538 Workerman[start.php] has been stopped
+2022-01-15 19:26:14 pid:23853 Workerman[examples/chat/start.php] stop success
+2022-01-15 19:27:19 pid:23920 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 19:27:28 pid:23959 Workerman[examples/chat/start.php] stop 
+2022-01-15 19:27:28 pid:23959 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 19:27:28 pid:23922 Workerman[start.php] stopping ...
+2022-01-15 19:27:28 pid:23922 Workerman[start.php] has been stopped
+2022-01-15 19:27:28 pid:23959 Workerman[examples/chat/start.php] stop success
+2022-01-15 13:33:06 pid:26357 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 14:01:59 pid:28872 Workerman[examples/chat/start.php] stop 
+2022-01-15 14:01:59 pid:28872 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 14:01:59 pid:26359 Workerman[start.php] stopping ...
+2022-01-15 14:01:59 pid:26359 Workerman[start.php] has been stopped
+2022-01-15 14:01:59 pid:28872 Workerman[examples/chat/start.php] stop success
+2022-01-15 14:02:04 pid:28902 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 14:02:44 pid:28906 ArgumentCountError: Too few arguments to function {closure}(), 1 passed and exactly 3 expected in /home/zakerxa/Desktop/my-socket-php/examples/chat/start_io.php:31
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#2 [internal function]: PHPSocketIO\Event\Emitter->emit()
+#3 /home/zakerxa/Desktop/my-socket-php/src/Socket.php(307): call_user_func_array()
+#4 /home/zakerxa/Desktop/my-socket-php/src/Socket.php(269): PHPSocketIO\Socket->onevent()
+#5 /home/zakerxa/Desktop/my-socket-php/src/Client.php(202): PHPSocketIO\Socket->onpacket()
+#6 [internal function]: PHPSocketIO\Client->ondecoded()
+#7 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#8 /home/zakerxa/Desktop/my-socket-php/src/Parser/Decoder.php(34): PHPSocketIO\Event\Emitter->emit()
+#9 /home/zakerxa/Desktop/my-socket-php/src/Client.php(182): PHPSocketIO\Parser\Decoder->add()
+#10 [internal function]: PHPSocketIO\Client->ondata()
+#11 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#12 /home/zakerxa/Desktop/my-socket-php/src/Engine/Socket.php(187): PHPSocketIO\Event\Emitter->emit()
+#13 [internal function]: PHPSocketIO\Engine\Socket->onPacket()
+#14 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#15 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transport.php(56): PHPSocketIO\Event\Emitter->emit()
+#16 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transport.php(61): PHPSocketIO\Engine\Transport->onPacket()
+#17 [internal function]: PHPSocketIO\Engine\Transport->onData()
+#18 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transports/WebSocket.php(26): call_user_func()
+#19 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Connection/TcpConnection.php(638): PHPSocketIO\Engine\Transports\WebSocket->onData2()
+#20 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Events/Select.php(294): Workerman\Connection\TcpConnection->baseRead()
+#21 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(2418): Workerman\Events\Select->loop()
+#22 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1542): Workerman\Worker->run()
+#23 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1373): Workerman\Worker::forkOneWorkerForLinux()
+#24 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1347): Workerman\Worker::forkWorkersForLinux()
+#25 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(542): Workerman\Worker::forkWorkers()
+#26 /home/zakerxa/Desktop/my-socket-php/examples/chat/start.php(12): Workerman\Worker::runAll()
+#27 {main}
+2022-01-15 14:02:44 pid:28904 worker[PHPSocketIO:28906] exit with status 64000
+2022-01-15 14:03:30 pid:29040 ArgumentCountError: Too few arguments to function {closure}(), 1 passed and exactly 3 expected in /home/zakerxa/Desktop/my-socket-php/examples/chat/start_io.php:31
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#2 [internal function]: PHPSocketIO\Event\Emitter->emit()
+#3 /home/zakerxa/Desktop/my-socket-php/src/Socket.php(307): call_user_func_array()
+#4 /home/zakerxa/Desktop/my-socket-php/src/Socket.php(269): PHPSocketIO\Socket->onevent()
+#5 /home/zakerxa/Desktop/my-socket-php/src/Client.php(202): PHPSocketIO\Socket->onpacket()
+#6 [internal function]: PHPSocketIO\Client->ondecoded()
+#7 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#8 /home/zakerxa/Desktop/my-socket-php/src/Parser/Decoder.php(34): PHPSocketIO\Event\Emitter->emit()
+#9 /home/zakerxa/Desktop/my-socket-php/src/Client.php(182): PHPSocketIO\Parser\Decoder->add()
+#10 [internal function]: PHPSocketIO\Client->ondata()
+#11 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#12 /home/zakerxa/Desktop/my-socket-php/src/Engine/Socket.php(187): PHPSocketIO\Event\Emitter->emit()
+#13 [internal function]: PHPSocketIO\Engine\Socket->onPacket()
+#14 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#15 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transport.php(56): PHPSocketIO\Event\Emitter->emit()
+#16 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transport.php(61): PHPSocketIO\Engine\Transport->onPacket()
+#17 [internal function]: PHPSocketIO\Engine\Transport->onData()
+#18 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transports/WebSocket.php(26): call_user_func()
+#19 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Connection/TcpConnection.php(638): PHPSocketIO\Engine\Transports\WebSocket->onData2()
+#20 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Events/Select.php(294): Workerman\Connection\TcpConnection->baseRead()
+#21 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(2418): Workerman\Events\Select->loop()
+#22 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1542): Workerman\Worker->run()
+#23 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1373): Workerman\Worker::forkOneWorkerForLinux()
+#24 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1347): Workerman\Worker::forkWorkersForLinux()
+#25 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1679): Workerman\Worker::forkWorkers()
+#26 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1628): Workerman\Worker::monitorWorkersForLinux()
+#27 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(544): Workerman\Worker::monitorWorkers()
+#28 /home/zakerxa/Desktop/my-socket-php/examples/chat/start.php(12): Workerman\Worker::runAll()
+#29 {main}
+2022-01-15 14:03:30 pid:28904 worker[PHPSocketIO:29040] exit with status 64000
+2022-01-15 14:03:43 pid:29297 ArgumentCountError: Too few arguments to function {closure}(), 1 passed and exactly 3 expected in /home/zakerxa/Desktop/my-socket-php/examples/chat/start_io.php:31
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#2 [internal function]: PHPSocketIO\Event\Emitter->emit()
+#3 /home/zakerxa/Desktop/my-socket-php/src/Socket.php(307): call_user_func_array()
+#4 /home/zakerxa/Desktop/my-socket-php/src/Socket.php(269): PHPSocketIO\Socket->onevent()
+#5 /home/zakerxa/Desktop/my-socket-php/src/Client.php(202): PHPSocketIO\Socket->onpacket()
+#6 [internal function]: PHPSocketIO\Client->ondecoded()
+#7 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#8 /home/zakerxa/Desktop/my-socket-php/src/Parser/Decoder.php(34): PHPSocketIO\Event\Emitter->emit()
+#9 /home/zakerxa/Desktop/my-socket-php/src/Client.php(182): PHPSocketIO\Parser\Decoder->add()
+#10 [internal function]: PHPSocketIO\Client->ondata()
+#11 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#12 /home/zakerxa/Desktop/my-socket-php/src/Engine/Socket.php(187): PHPSocketIO\Event\Emitter->emit()
+#13 [internal function]: PHPSocketIO\Engine\Socket->onPacket()
+#14 /home/zakerxa/Desktop/my-socket-php/src/Event/Emitter.php(93): call_user_func_array()
+#15 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transport.php(56): PHPSocketIO\Event\Emitter->emit()
+#16 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transport.php(61): PHPSocketIO\Engine\Transport->onPacket()
+#17 [internal function]: PHPSocketIO\Engine\Transport->onData()
+#18 /home/zakerxa/Desktop/my-socket-php/src/Engine/Transports/WebSocket.php(26): call_user_func()
+#19 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Connection/TcpConnection.php(638): PHPSocketIO\Engine\Transports\WebSocket->onData2()
+#20 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Events/Select.php(294): Workerman\Connection\TcpConnection->baseRead()
+#21 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(2418): Workerman\Events\Select->loop()
+#22 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1542): Workerman\Worker->run()
+#23 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1373): Workerman\Worker::forkOneWorkerForLinux()
+#24 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1347): Workerman\Worker::forkWorkersForLinux()
+#25 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1679): Workerman\Worker::forkWorkers()
+#26 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(1628): Workerman\Worker::monitorWorkersForLinux()
+#27 /home/zakerxa/Desktop/my-socket-php/vendor/workerman/workerman/Worker.php(544): Workerman\Worker::monitorWorkers()
+#28 /home/zakerxa/Desktop/my-socket-php/examples/chat/start.php(12): Workerman\Worker::runAll()
+#29 {main}
+2022-01-15 14:03:43 pid:28904 worker[PHPSocketIO:29297] exit with status 64000
+2022-01-15 14:17:56 pid:32296 Workerman[examples/chat/start.php] stop 
+2022-01-15 14:17:56 pid:32296 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 14:17:56 pid:28904 Workerman[start.php] stopping ...
+2022-01-15 14:17:56 pid:28904 Workerman[start.php] has been stopped
+2022-01-15 14:17:56 pid:32296 Workerman[examples/chat/start.php] stop success
+2022-01-15 14:17:58 pid:32325 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 14:22:36 pid:32777 Workerman[examples/chat/start.php] stop 
+2022-01-15 14:22:36 pid:32777 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 14:22:36 pid:32327 Workerman[start.php] stopping ...
+2022-01-15 14:22:36 pid:32327 Workerman[start.php] has been stopped
+2022-01-15 14:22:37 pid:32777 Workerman[examples/chat/start.php] stop success
+2022-01-15 14:22:38 pid:32783 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 14:31:21 pid:33604 Workerman[examples/chat/start.php] stop 
+2022-01-15 14:31:21 pid:33604 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 14:31:21 pid:32785 Workerman[start.php] stopping ...
+2022-01-15 14:31:21 pid:32785 Workerman[start.php] has been stopped
+2022-01-15 14:31:21 pid:33604 Workerman[examples/chat/start.php] stop success
+2022-01-15 14:31:23 pid:33626 Workerman[examples/chat/start.php] start in DAEMON mode
+2022-01-15 17:14:18 pid:53384 Workerman[examples/chat/start.php] stop 
+2022-01-15 17:14:19 pid:53384 Workerman[examples/chat/start.php] is stopping ...
+2022-01-15 17:14:19 pid:33628 Workerman[start.php] stopping ...
+2022-01-15 17:14:19 pid:33628 Workerman[start.php] has been stopped
+2022-01-15 17:14:19 pid:53384 Workerman[examples/chat/start.php] stop success
+2022-01-15 17:19:33 pid:54641 Workerman[chat/start.php] stop 
+2022-01-15 17:19:33 pid:54641 Workerman[chat/start.php] not run
+2022-01-15 17:19:47 pid:54651 Workerman[chat/start.php] start in DAEMON mode
+2022-01-15 18:07:37 pid:57753 Workerman[start.php] start in DEBUG mode
+2022-01-15 18:08:01 pid:57788 Workerman[start.php] stop 
+2022-01-15 18:08:01 pid:57788 Workerman[start.php] not run
+2022-01-15 18:08:07 pid:57810 Workerman[start.php] status 
+2022-01-15 18:08:07 pid:57810 Workerman[start.php] not run
+2022-01-15 18:08:15 pid:57816 Workerman[start.php] connections 
+2022-01-15 18:08:15 pid:57816 Workerman[start.php] not run
+2022-01-15 18:08:35 pid:57891 Workerman[start.php] connections 
+2022-01-15 18:08:35 pid:57891 Workerman[start.php] not run
+2022-01-15 18:08:43 pid:57917 Workerman[start.php] start in DEBUG mode
+2022-01-15 18:10:33 pid:58126 Workerman[start.php] connections 
+2022-01-15 18:10:33 pid:58126 Workerman[start.php] not run
+2022-01-15 18:10:38 pid:58154 Workerman[start.php] start in DEBUG mode
+2022-01-15 18:11:41 pid:58204 Workerman[start.php] start in DEBUG mode
+2022-01-15 18:54:43 pid:58204 Workerman[start.php] stopping ...
+2022-01-15 18:54:43 pid:58204 Workerman[start.php] has been stopped
+2022-02-03 16:22:36 pid:74877 Workerman[start.php] start in DEBUG mode
